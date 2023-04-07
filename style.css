@@ -1,10 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /*border: solid 1px black;*/
 }
 
 body {
+  display: grid;
+  grid-template: 1fr 4fr / 1fr 5fr;
   width: 100%;
   height: 100vh;
+}
+
+/*navigation*/
+
+nav {
+  display: grid;
+  grid-template: 10% repeat(9, max(5%, 35px)) / 35px 1fr;
+  grid-area: 1/1/3/2;
+  align-items: center;
+  background-color: #0099ff;
+  color: white;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+nav h1 {
+  font-size: 30px;
+}
+
+
+/*header*/
+
+header {
+  display: grid;
+  grid-template-rows: 1fr 1fr; 
+  grid-area: 1/2/2/3;
+  background-color: white;
+}
+
+.header-top,
+.header-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  padding: 1rem 7rem;
+  align-items: center;
+}
+
+.search,
+.profile-dash,
+.profile-info,
+.buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex: 1;
+}
+
+.profile-dash,
+.buttons {
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.greet {
+  display: grid;
+  align-items: center;
+}
+
+.icon {
+  width: 2rem;
+  height: auto;
+}
+
+.search input {
+  width: 80%;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.pic-small {
+  width: 2.5rem;
+  height: auto;
+  border-radius: 100%;
+  border: solid 1px #0099ff;
+}
+
+.pic-big {
+  width: 4rem;
+  height: auto;
+  border-radius: 100%;
+  border: solid 1px #0099ff;
+}
+
+.buttons button {
+  font-size: 20px;
+  width: 7rem;
+  padding: 0.5rem;
+  background-color: #0099ff;
+  border: solid 1px #0099ff;
+  border-radius: 25px;
+  color: white;
+}
+
+/*main*/
+
+main {
+  grid-area: 2/2/3/3;
+  background-color: lightgray;
 }
